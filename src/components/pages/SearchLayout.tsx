@@ -138,7 +138,7 @@ export default function SearchLayout() {
 				</div>
 				<h1 className="font-bold text-5xl">{title}</h1>
 				{linksToUse.length > 0 ? (
-					<nav className="p-2 flex gap-2 rounded-lg">{linksEl}</nav>
+					<nav className="p-2 flex gap-2 rounded-lg bg-neutral-800">{linksEl}</nav>
 				) : null}
 			</div>
 			<Outlet />

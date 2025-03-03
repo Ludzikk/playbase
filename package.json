@@ -8,6 +8,7 @@
 		"dev": "vite",
 		"build": "tsc -b && vite build",
 		"lint": "eslint .",
+		"postbuild": "copy dist\\index.html dist\\404.html",
 		"preview": "vite preview",
 		"predeploy": "cross-env GITHUB_PAGES=true npm run build",
 		"deploy": "gh-pages -d dist"

@@ -32,15 +32,15 @@ export default function SearchBoxPage() {
 	}, []);
 
 	if (gamesList.length === 0) {
-			return (
-				<main className="flex-1 justify-center items-center gap-4 relative">
-					<EmptyParalaxImg h={40} bottom={"bottom-[-350px]"} />
-					<div className="flex flex-col justify-center items-center gap-4 relative">
-						<h1 className="text-3xl font-bold relative z-[1] ">Loading ...</h1>
-					</div>
-				</main>
-			);
-		}
+		return (
+			<main className="flex-1 justify-center items-center gap-4 relative">
+				<EmptyParalaxImg h={40} bottom={"bottom-[-350px]"} />
+				<div className="flex flex-col justify-center items-center gap-4 relative">
+					<div className="loader"></div>
+				</div>
+			</main>
+		);
+	}
 
 	if (filteredGames.length === 0) {
 		return (
