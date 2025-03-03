@@ -9,7 +9,7 @@ export default function Info() {
 			<Wrapper>
 				<div className="py-6 flex items-center justify-around">
 					<div className="hidden lg:flex items-center gap-4">
-						<IoIosCloudDownload className="text-5xl text-sky-400" />
+						<IoIosCloudDownload className="text-5xl text-sky-300" />
 						<h3 className="font-bold flex flex-col">
 							<span className="text-xl">Super fast</span>
 							<span className="text-sm font-normal">
@@ -19,7 +19,7 @@ export default function Info() {
 						<div className="bg-gray-200/10 w-[2px] h-[100px] ml-4"></div>
 					</div>
 					<div className="hidden md:flex items-center gap-4">
-						<AiFillSafetyCertificate className="text-5xl text-sky-400" />
+						<AiFillSafetyCertificate className="text-5xl text-sky-300" />
 						<h3 className="font-bold flex flex-col">
 							<span className="text-xl">Reliable & safe</span>
 							<span className="text-sm font-normal">Over 10,000 games</span>
@@ -27,7 +27,7 @@ export default function Info() {
 						<div className="bg-gray-200/10 w-[2px] h-[100px] ml-4"></div>
 					</div>
 					<div className="hidden sm:flex items-center gap-4">
-						<IoIosChatbubbles className="text-5xl text-sky-400" />
+						<IoIosChatbubbles className="text-5xl text-sky-300" />
 						<h3 className="font-bold flex flex-col">
 							<span className="text-xl">Customer support</span>
 							<span className="text-sm font-normal">Human support 24/7</span>

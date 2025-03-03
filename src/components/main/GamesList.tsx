@@ -7,6 +7,7 @@ type GamesListProps = {
 };
 
 export default function GamesList({ children, title }: GamesListProps) {
+
 	return (
 		<section className="py-8">
 			<Wrapper>

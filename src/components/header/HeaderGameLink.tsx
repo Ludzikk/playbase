@@ -14,9 +14,13 @@ type HeaderGameLinkProps = {
 export default function HeaderGameLink({ game }: HeaderGameLinkProps) {
 	const priceAfterSale = getPriceAfterSale(game.price, game.sale);
 
+	if (!game) {
+		return;
+	}
+
 	return (
 		<Link
-			to={`games/${game.title}`}
+			to={`../game/${game.title}`}
 			className="absolute top-0 left-0 w-full h-full z-[1] flex items-center">
 			<Wrapper maxW="max-w-[1000px]">
 				<div className="flex flex-col items-center md:items-start gap-2">

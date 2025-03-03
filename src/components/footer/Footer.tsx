@@ -28,7 +28,7 @@ export default function Footer() {
 
 	const footerLinksEl = footerLinks.map((link) => {
 		return (
-			<Link key={link.to} to={link.to}>
+			<Link key={link.to} to={link.to} className="hover:text-white/80 duration-300">
 				{link.name}
 			</Link>
 		);

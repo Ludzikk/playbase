@@ -1,9 +1,14 @@
+import { RefObject } from "react";
 import Nav from "../nav/Nav";
 
-export default function Header() {
+type HeaderProps = {
+	navRef: RefObject<HTMLDivElement | null>
+}
+
+export default function Header({ navRef }: HeaderProps) {
 	return (
 		<header>
-			<Nav />
+			<Nav navRef={navRef}/>
 		</header>
 	);
 }
