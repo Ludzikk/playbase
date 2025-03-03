@@ -1,6 +1,6 @@
 import Button from "../other/Button";
-import FirstImg from "/games/witcher3/bg.jpg";
-import SecondImg from "/games/eldenringnightreign/bg.jpg";
+import FirstImg from "/1bg.jpg";
+import SecondImg from "/2.jpg";
 
 export default function PageNotFound() {
 	return (
