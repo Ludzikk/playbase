@@ -56,6 +56,7 @@ export default function Footer() {
 									href="https://github.com/Ludzikk"
 									target="_blank"
 									rel="noopener noreferrer"
+									aria-label="Check out github of website creator"
                                     className="text-3xl hover:text-white/80 duration-300">
 									<FaGithub />
 								</a>
@@ -63,6 +64,7 @@ export default function Footer() {
 									href="https://www.instagram.com/klcekk/"
 									target="_blank"
 									rel="noopener noreferrer"
+									aria-label="Check out instagram of website creator"
                                     className="text-3xl hover:text-white/80 duration-300">
 									<FaInstagram />
 								</a>

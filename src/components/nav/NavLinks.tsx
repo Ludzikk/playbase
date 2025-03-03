@@ -68,8 +68,8 @@ export default function NavLinks({ className }: NavLinkProps) {
 				state={{ platforms: link.state, links: link.link }}
 				className={({ isActive }) =>
 					isActive
-						? `${linkClassName} ${className} active-${link.link}`
-						: `${linkClassName} ${className} hover:bg-white/30`
+						? `${linkClassName} ${className} px-2 active-${link.link}`
+						: `${linkClassName} ${className} px-2 hover:bg-white/30`
 				}>
 				<IconComponent />
 				<span>{link.name}</span>
@@ -78,7 +78,7 @@ export default function NavLinks({ className }: NavLinkProps) {
 	});
 
 	return (
-		<div className="flex justify-center items-center gap-4 text-sm md:gap-4 md:text-base">
+		<div className="flex justify-center py-2 items-center gap-1 text-sm md:gap-4 md:text-base">
 			{linksEl}
 		</div>
 	);

@@ -6,6 +6,7 @@ type ButtonProps = {
 	className?: string;
 	isLink: boolean;
 	to: string;
+	onClick?: () => void
 };
 
 export default function Button({
@@ -13,6 +14,7 @@ export default function Button({
 	className,
 	isLink,
 	to,
+	...rest
 }: ButtonProps) {
 	return isLink ? (
 		<Link
@@ -22,7 +24,8 @@ export default function Button({
 		</Link>
 	) : (
 		<button
-			className={`py-2 px-4 bg-sky-600 font-bold rounded hover:bg-sky-700 duration-300 [box-shadow:0px_5px_5px_rgba(0,0,0,0.1)] ${className}`}>
+			className={`py-2 px-4 bg-sky-600 font-bold rounded hover:bg-sky-700 duration-300 [box-shadow:0px_5px_5px_rgba(0,0,0,0.1)] ${className}`}
+			{...rest}>
 			{children}
 		</button>
 	);

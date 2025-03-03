@@ -99,7 +99,7 @@ button {
 	}
 }
 
-.scroll-games-list::-webkit-scrollbar-track {
+.scroll-games-list::-webkit-scrollbar-track{
 	border-radius: 5px;
 	background-color: #333;
 }
@@ -108,10 +108,15 @@ button {
 	height: 8px;
 }
 
-.scroll-games-list::-webkit-scrollbar-thumb {
+.scroll-games-list::-webkit-scrollbar-thumb, .scroll-cart::-webkit-scrollbar-thumb {
 	border-radius: 5px;
 	background-color: #0084d1;
 }
+
+.scroll-cart::-webkit-scrollbar {
+	width: 8px;
+}
+
 
 .show-full-width-search {
 	animation: show-full-width-search 0.6s forwards;

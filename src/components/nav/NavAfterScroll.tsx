@@ -5,6 +5,7 @@ import NavLogo from "./NavLogo";
 import NavSearchBox from "./NavSearchBox";
 import { useContext } from "react";
 import { SearchBoxContext } from "./Nav";
+import { Link } from "react-router-dom";
 
 export default function NavAfterScroll() {
 	const searchBoxContext = useContext(SearchBoxContext);
@@ -88,7 +89,9 @@ export default function NavAfterScroll() {
 				</>
 			)}
 
-			<FaBasketShopping className="absolute right-0 top-1/2 translate-y-[-50%] mr-4 text-2xl md:text-3xl hover:text-sky-400 duration-300 cursor-pointer" />
+			<Link to="cart" aria-label="Go to cart">
+				<FaBasketShopping className="absolute right-0 top-1/2 translate-y-[-50%] mr-4 text-2xl md:text-3xl hover:text-sky-400 duration-300 cursor-pointer" />
+			</Link>
 		</>
 	);
 }

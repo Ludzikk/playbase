@@ -24,11 +24,11 @@ export default function GameVisualsSection({ currentGame }: CurrentGameProps) {
 	const imgEl = currentGame.images.map((img, index) => {
 		return (
 			<PhotoView src={img} key={index}>
-				<div className="overflow-hidden rounded-xl [box-shadow:0px_5px_5px_rgba(0,0,0,0.1)]">
+				<div className="overflow-hidden h-full rounded-xl [box-shadow:0px_5px_5px_rgba(0,0,0,0.1)]">
 					<img
 						src={img}
 						alt={currentGame.title}
-						className="cursor-pointer h-full hover:scale-[1.05] duration-300"
+						className="cursor-pointer w-full h-auto object-cover hover:scale-[1.05] duration-300"
 					/>
 				</div>
 			</PhotoView>
@@ -43,9 +43,7 @@ export default function GameVisualsSection({ currentGame }: CurrentGameProps) {
 
 	return (
 		<section>
-			<h2 className="font-bold text-2xl pb-6">
-				Visuals
-			</h2>
+			<h2 className="font-bold text-2xl pb-6">Visuals</h2>
 			<div className="grid grid-cols-2 md:grid-cols-3 gap-4 lg:hidden">
 				<PhotoProvider>{imgEl}</PhotoProvider>
 			</div>

@@ -6,6 +6,7 @@ import NavTopLinks from "./NavTopLinks";
 import NavSearchBox from "./NavSearchBox";
 import { useContext } from "react";
 import { SearchBoxContext } from "./Nav";
+import { Link } from "react-router-dom";
 
 export default function NavBeforeScroll() {
 	const searchBoxContext = useContext(SearchBoxContext);
@@ -64,7 +65,9 @@ export default function NavBeforeScroll() {
 						inputClassName="w-[60%] h-[55%]"
 					/>
 				)}
-				<FaBasketShopping className="absolute right-0 mr-4 text-2xl md:text-3xl hover:text-sky-400 duration-300 cursor-pointer md:mt-4" />
+				<Link to="cart" aria-label="Go to cart">
+					<FaBasketShopping className="absolute right-0 top-1/2 translate-y-[-50%] mr-4 text-2xl md:text-3xl hover:text-sky-400 duration-300 cursor-pointer" />
+				</Link>
 			</div>
 			<div className="flex justify-center bg-white/20 md:bg-white/0">
 				<div className="relative flex justify-center items-center gap-8 pl-6 rounded-full">

@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import getPriceAfterSale from "../../functions/priceAfterSale";
 import SaleInfo from "../other/SaleInfo";
 import Button from "../other/Button";
+import { useContext } from "react";
+import { CartContext } from "../../App";
 
 type GameItemProps = {
 	price: number;
@@ -11,11 +13,22 @@ type GameItemProps = {
 };
 
 export default function GameItem({ price, sale, title, img }: GameItemProps) {
+	const cartContext = useContext(CartContext);
+	const addItemToCart = cartContext?.addItemToCart;
+
+	function addItemToCartOnClick() {
+		if (addItemToCart) addItemToCart(title);
+	}
+
 	return (
 		<li className="w-[150px] md:w-[200px] bg-neutral-800 group rounded [box-shadow:0px_5px_5px_rgba(0,0,0,0.1)]">
 			<Link to={`../game/${title}`}>
 				<div className="w-[150px] h-[200px] md:w-[200px] md:h-[250px] rounded-t overflow-hidden relative game-item-hover">
-					<img src={img} alt={title} className="w-full h-full object-cover duration-300" />
+					<img
+						src={img}
+						alt={title}
+						className="w-full h-full object-cover duration-300"
+					/>
 					{sale > 0 && (
 						<SaleInfo
 							game={sale}
@@ -32,7 +45,11 @@ export default function GameItem({ price, sale, title, img }: GameItemProps) {
 							{getPriceAfterSale(price, sale).toFixed(2)}zł
 						</p>
 					</div>
-					<Button isLink={false} to="" className="mt-4 w-full">
+					<Button
+						onClick={addItemToCartOnClick}
+						isLink={false}
+						to=""
+						className="mt-4 w-full">
 						Add to cart
 					</Button>
 				</div>
