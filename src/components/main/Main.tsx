@@ -68,7 +68,7 @@ export default function Main() {
 			{forYouGamesEl.length > 0 ? (
 				<GamesList title="For you">{forYouGamesEl}</GamesList>
 			) : (
-				<EmptyGamesList title="Best Games" />
+				<EmptyGamesList title="For you" />
 			)}
 			{eldenRingNightreign ? (
 				<ParalaxImg
@@ -82,7 +82,7 @@ export default function Main() {
 			{indieGamesEl.length > 0 ? (
 				<GamesList title="Best indie games">{indieGamesEl}</GamesList>
 			) : (
-				<EmptyGamesList title="Best Games" />
+				<EmptyGamesList title="Best indie games" />
 			)}
 			<Newsletter />
 		</main>

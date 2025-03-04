@@ -13,10 +13,10 @@ export default function CartPage() {
 		<main className="flex-1 flex items-center justify-center pt-40 lg:pt-0">
 			<section className="w-full">
 				<Wrapper maxW="max-w-[1000px]">
-					<div className="flex flex-col lg:flex-row gap-6">
+					<div className="flex flex-col lg:flex-row gap-6 py-6 pt-40 flex-1">
 						<div className="lg:w-[70%] flex flex-col">
 							<h2 className="font-bold text-xl pb-2 md:text-2xl">Cart</h2>
-							<div className="bg-neutral-800 flex-1 rounded-lg p-4 flex flex-col items-center [box-shadow:0px_5px_5px_rgba(0,0,0,0.1)] lg:max-h-[270px] lg:items-start">
+							<div className="bg-neutral-800 flex-1 rounded-lg p-4 flex flex-col items-center [box-shadow:0px_5px_5px_rgba(0,0,0,0.1)] lg:items-start  lg:max-h-[50vh] lg:h-full lg:min-h-[270px]">
 								{cart && cart.length === 0 ? <CartEmpty /> : <CartList />}
 							</div>
 						</div>
